@@ -1,14 +1,16 @@
-public class Pessoa {
-        public String nome;
-        public byte idade;
-        public String pai;
-        public String mae;
+package POO;
 
-        public Pessoa(String nome, byte idade, String pai, String mae) {
+public class Pessoa {
+        private String nome;
+        private int idade;
+        private Pessoa pai;
+        private Pessoa mae;
+
+        public Pessoa(String nome, int idade, Pessoa pai, Pessoa pessoaMae) {
             this.nome = nome;
             this.idade = idade;
             this.pai = pai;
-            this.mae = mae;
+            this.mae = pessoaMae;
         }
 
         public String getNome(){
@@ -16,25 +18,29 @@ public class Pessoa {
         } public void setNome(String nome){
             this.nome = nome;}
 
-        public byte getIdade(){
+        public int getIdade(){
             return this.idade;
-        } public void setIdade(byte idade){
+        } public void setIdade(int idade){
             this.idade = idade;}
 
-        public String getPai(){
-            return this.pai;
-        } public void setPai(String pai){
+        public String getNomePai(){
+            return this.pai.getNome();
+        } public void setNomePai(String nomePai){
             this.pai = pai;}
 
-        public String getMae(){
-            return this.mae;
-        } public void setMae(String mae){
+        public String getNomeMae(){
+            return this.mae.getNome();
+        } public void setNomeMae(String nomeMae){
             this.mae = mae;}
 
-        public void status() {
-            System.out.println("\nNome: " + this.nome);
+        public void mostrarArvoreGenealogicaPessoa() {
+            System.out.println("Nome: " + this.nome);
             System.out.println("Idade: " + this.idade);
-            System.out.println("Pai: " + this.pai);
-            System.out.println("Mãe: " + this.mae);
+            System.out.println("Nome do pai: " + this.pai.getNome());
+            System.out.println("Nome da mãe: " + this.mae.getNome());
+            System.out.println("Nome do avô paterno: " + pai.pai.getNome());
+            System.out.println("Nome da avó paterna: " + pai.mae.getNome());
+            System.out.println("Nome do avô materno: " + mae.pai.getNome());
+            System.out.println("Nome da avó materna: " + mae.mae.getNome() + "\n");
         }
 }
