@@ -1,6 +1,6 @@
 package POO;
 
-public class PooArvoreGenealogica {
+public class Main {
     public static void main(String[] args) {
         Pessoa raiz = new Pessoa("Deus", 44, null, null );
 
