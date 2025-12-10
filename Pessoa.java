@@ -15,25 +15,9 @@ public class Pessoa {
 
         public String getNome(){
             return this.nome;
-        } public void setNome(String nome){
-            this.nome = nome;}
+        }
 
-        public int getIdade(){
-            return this.idade;
-        } public void setIdade(int idade){
-            this.idade = idade;}
-
-        public String getNomePai(){
-            return this.pai.getNome();
-        } public void setNomePai(String nomePai){
-            this.pai = pai;}
-
-        public String getNomeMae(){
-            return this.mae.getNome();
-        } public void setNomeMae(String nomeMae){
-            this.mae = mae;}
-
-        public void mostrarArvoreGenealogicaPessoa() {
+        public void mostrarArvoreGenealogica() {
             System.out.println("Nome: " + this.nome);
             System.out.println("Idade: " + this.idade);
             System.out.println("Nome do pai: " + this.pai.getNome());
